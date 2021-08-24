@@ -1,0 +1,37 @@
+﻿@model IList<int>
+@{
+    ViewBag.Title = "Prime Numbers";
+}
+
+<style type="text/css">
+    body{
+        margin:50px;
+    }
+    form{
+        padding:10px;
+        border-style:none;
+        width:250px;
+    }
+</style>
+
+
+<h2>Prime number series</h2>
+
+<p>Enter The Number to find the series of primes</p>
+
+<form action="" method="post">
+    <p>
+        <label for="text1">Enter the maximum number:</label>
+        <input type="text" name="text1" />
+    </p>
+    <p>
+        <input type="submit" value="Display" />
+    </p>
+    <h3>Prime Numbers</h3>
+    <ul class="table-striped">
+        @foreach (var item in Model)
+        {
+            <text> --></text>@item
+        }
+    </ul>
+</form>
